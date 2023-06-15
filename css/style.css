@@ -1,0 +1,181 @@
+/*=====================メインページ======================*/
+/*タイトルのテキストの動き*/
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+@keyframes text_anime_on {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+.title{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Rampart One', cursive;
+    z-index: 2;
+}
+
+.arrow{
+    width: 30px;
+    height: 30px;
+    border: 5px solid;
+    border-color: #00bfff #00bfff transparent transparent;
+    transform: rotate(45deg);
+  }
+  .arrow1{
+    width: 40px;
+    height: 40px;
+    border: 5px solid;
+    border-color: #565656 #565656 transparent transparent;
+    transform: rotate(45deg);
+  }
+  .arrow2{
+    width: 50px;
+    height: 50px;
+    border: 5px solid;
+    border-color: #00bfff#00bfff transparent transparent;
+    transform: rotate(45deg);
+  }
+  .arrow3{
+    width: 60px;
+    height: 60px;
+    border: 5px solid;
+    border-color: #565656 #565656 transparent transparent;
+    transform: rotate(45deg);
+  }
+
+  /*矢印をくるっとさせる*/
+
+  /* 　Y 軸（横へ） */
+.rotateY{
+	animation-name:rotateYAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes rotateYAnime{
+	from{
+		transform: rotateY(0);
+		}
+	to{
+		transform: rotateY(-360deg);
+		}
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+}
+.rotateY{
+    display: flex;
+}
+.mail-area{
+    text-align: center;
+}
+.new-area{
+    text-align: center;
+}
+
+textarea{
+    outline: royalblue solid 2px;
+    height: 60vh;
+    width: 400px;
+    
+}
+textarea:focus{
+        outline:thick double yellow ;
+      }
+
+.button{
+text-align: center;
+flex-direction: column;
+margin-top: 220px;
+}
+
+.btn{
+  margin-top: 50px;
+  background-color: #0078d0;
+  border: 0;
+  border-radius: 56px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:before {
+  background-color: initial;
+  background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+  border-radius: 125px;
+  content: "";
+  height: 50%;
+  left: 4%;
+  opacity: .5;
+  position: absolute;
+  top: 0;
+  transition: all .3s;
+  width: 92%;
+}
+
+.btn:hover {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 16px 48px;
+  }
+}
+
+h2{
+    font-family: 'Noto Serif', serif;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.fluid {
+    width:10vh;/*横幅*/
+    height: 10vh;/*縦幅*/
+    background:#fff100;/*背景色*/
+    animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+    z-index: 1;
+    margin-left: 150px;
+  }
+  
+  @keyframes fluidrotate {  
+        
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+        
+  }
