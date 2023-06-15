@@ -8,17 +8,21 @@
 }
 
 .title{
-    text-align: center;
-    margin-top: 50px;
-    font-family: 'Rampart One', cursive;
     z-index: 2;
+    text-align: center;
+    padding-top: 50px;
+    font-family: 'Rampart One', cursive;
+    position: relative;
+    color: #565656;
+    font-size: 3rem;
+   
 }
 
 .arrow{
     width: 30px;
     height: 30px;
     border: 5px solid;
-    border-color: #00bfff #00bfff transparent transparent;
+    border-color: yellow yellow transparent transparent;
     transform: rotate(45deg);
   }
   .arrow1{
@@ -32,7 +36,7 @@
     width: 50px;
     height: 50px;
     border: 5px solid;
-    border-color: #00bfff#00bfff transparent transparent;
+    border-color: yellow yellow transparent transparent;
     transform: rotate(45deg);
   }
   .arrow3{
@@ -76,15 +80,25 @@
     text-align: center;
 }
 
-textarea{
+#textarea3{
     outline: royalblue solid 2px;
     height: 60vh;
     width: 400px;
     
 }
-textarea:focus{
+#textarea3:focus{
         outline:thick double yellow ;
-      }
+}
+
+.form{
+    outline: royalblue solid 2px;
+    height: 60vh;
+    width: 400px;
+    
+}
+.form:focus{
+        outline:thick double yellow ;
+}
 
 .button{
 text-align: center;
@@ -145,37 +159,21 @@ h2{
     margin-bottom: 10px;
 }
 
-.fluid {
-    width:10vh;/*横幅*/
-    height: 10vh;/*縦幅*/
-    background:#fff100;/*背景色*/
-    animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
-    z-index: 1;
-    margin-left: 150px;
-  }
-  
-  @keyframes fluidrotate {  
-        
-  0%, 100% {
-      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
-  }
-  14% {
-      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
-  }
-  28% {
-      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
-  }
-  42% {
-      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
-  }
-  56% {
-      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
-  }
-  70% {
-      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
-  }
-  84% {
-      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
-  }
-        
-  }
+html,body{
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+	position:fixed;/*描画固定*/
+	z-index:-1;/*描画を一番下に*/
+	width: 100%;
+	height: 100%;
+	background-color:rgba(35, 202, 163, 0.6);/*背景色*/
+}
+
+#wrapper{
+	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+	width:100%;
+	height: 100%;
+}
