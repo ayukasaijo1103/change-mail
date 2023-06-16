@@ -133,3 +133,4 @@ function EachTextAnimeControl() {
 //     const ta3 = document.getElementById("textarea3").value;
 //     document.getElementById("span3").textContent = ta3;
 //   }
+

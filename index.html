@@ -33,23 +33,22 @@
             <h2 class="before">Before Mail</h2>
             <textarea id="textarea3" value="1" cols="50" rows="5" maxlength="15">テスト</textarea>          </div>
            <div class="button">
-            <div class="rotateY">
+            <!-- <div class="rotateY">
              <div class="arrow"></div>
              <div class="arrow1"></div>
              <div class="arrow2"></div>
              <div class="arrow3"></div>
-           </div>            
+            </div>             -->
            <input type="button" class="btn" value="CHANGE" onclick="clickBtn5()" />
-        </div>
+           </div>
          <div class="new-area">
             <h2 class="after">After Mail</h2>
-            <!-- <textarea> -->
                 <py-script>
-                a="こんにちは"
-                print(a)
-              </py-script>
-            <!-- </textarea> -->
-         </div>
+                from datetime import datetime
+                now = datetime.now()
+                print(f"今は{now:%Y年%m月%d日 %H:%M:%S}です。")
+                </py-script>
+          </div>
         </div>
        
         <!--/wrapper--></div>
