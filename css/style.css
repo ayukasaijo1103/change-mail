@@ -7,68 +7,110 @@
 	100% {opacity:1;}
 }
 
+
+
+/* CSS */
+.button-48 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: system-ui,-apple-system,system-ui,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+section{
+  background-color: rgba(226, 62, 62, 0.5);
+  width: 100%;
+  height: 100vh;
+}
+.main-bg{
+   width: 800px;
+   height: 700px;
+   object-fit: cover;
+   border-radius: 60% 40% 70% 30% / 30% 60% 40% 70% ;
+   margin-left: 860px;
+   margin-top: 100px;
+   margin-bottom: 100px;
+   z-index: 2;
+   position: relative;
+}
+
 .title{
-    z-index: 2;
-    text-align: center;
-    padding-top: 50px;
-    font-family: 'Rampart One', cursive;
-    position: relative;
+    font-family: "source-han-sans-japanese", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    position: absolute;
     color: #fff;
-    font-size: 3rem;
-   
+    font-size: 3.275rem;
+    margin-top: 300px;
+    margin-left: 200px;
 }
 
-.arrow{
-    width: 30px;
-    height: 30px;
-    border: 5px solid;
-    border-color: yellow yellow transparent transparent;
-    transform: translateY(-25%) rotate(135deg);  }
-  /* .arrow1{
-    width: 40px;
-    height: 40px;
-    border: 5px solid;
-    border-color: #565656 #565656 transparent transparent;
-    transform: translateY(-25%) rotate(135deg);  }
-  .arrow2{
-    width: 50px;
-    height: 50px;
-    border: 5px solid;
-    border-color: yellow yellow transparent transparent;
-    transform: translateY(-25%) rotate(135deg);  }
-  .arrow3{
-    width: 60px;
-    height: 60px;
-    border: 5px solid;
-    border-color: #565656 #565656 transparent transparent;
-    transform: translateY(-25%) rotate(135deg);  } */
+.caption{
+  font-family: "source-han-sans-japanese", sans-serif;
+  color: #fff;
+  font-size: 2rem;
 
-  /*矢印をくるっとさせる*/
 
-  /* 　Y 軸（横へ） */
-.rotateY{
-	animation-name:rotateYAnime;
-	animation-duration:1s;
-	animation-fill-mode:forwards;
 }
 
-@keyframes rotateYAnime{
-	from{
-		transform: rotateY(0);
-		}
-	to{
-		transform: rotateY(-360deg);
-		}
+section{
+  text-align: center;
 }
-
 .content{
-    /* display: flex ;
-    justify-content: space-around;
-    margin-top: 80px; */
-    flex-direction: column;
+  flex-direction: column;
 }
 .rotateY{
-    /* display: flex; */
     margin-left: 650px;
 }
 .mail-area{
@@ -76,7 +118,6 @@
 }
 .new-area{
     text-align: center;
-    /* display: flex !important; */
 }
 
 #textarea3{
@@ -168,20 +209,10 @@ html,body{
 	height: 100%;/*高さを100%にして描画エリアをとる*/
 }
 
-#particles-js{ 
-	position:fixed;/*描画固定*/
-	z-index:-1;/*描画を一番下に*/
-	width: 100%;
-	height: 100%;
-	background-color:#000;/*背景色*/
+#particles-js{
+	background-color:rgba(255, 255, 255, .5);/*背景色*/
 }
 
-#wrapper{
-	position: relative;/*描画を#particles-jsよりも上にするためposition:relative;を指定*/
-	z-index: 1;/*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
-	width:100%;
-	height: 100%;
-}
 
 .py-terminal{
  width: 400px !important;
@@ -199,3 +230,4 @@ html,body{
 .after{
   margin-top: 70px;
 }
+
